@@ -24,7 +24,7 @@ output = np.empty_like(zaladuj)
 for i in range(0, shape[0]):
     for j in range(0, shape[1]):
         rgb =  zaladuj[i][j]
-        avg = (rgb[0]+rgb[1]+rgb[2])/3
+        avg = ((rgb[0]*(4/10))+(rgb[1]*(4/10))+(rgb[2]*(2/10)))
         output[i][j]=[avg,avg,avg]
 
 fig, (axL, axR) = plt.subplots(ncols = 2, tight_layout = True)
